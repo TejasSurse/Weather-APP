@@ -57,6 +57,10 @@ search.addEventListener('click', ()=>{
 			wind.innerHTML = `${data.wind.speed}km/h`;
 			
 		} catch (error) {
+			let dec = document.querySelector('.description');
+			let img = document.querySelector('.weather-box img')
+			dec.innerHTML = "City Not Found";
+			img.src = 'images/404.png';			
 			console.error('Error:', error.message);
 		}
 	}
